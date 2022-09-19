@@ -1,6 +1,6 @@
 import wxpy
 from wx_controller import wx_controller as WX_C
-
+import os
 
 class MainProcess:
     def __init__(self):
@@ -17,4 +17,6 @@ class MainProcess:
 
 
 if __name__ == '__main__':
+    if os.path.exists('./bot_saver') is False:
+        os.mkdir('./bot_saver')
     main = MainProcess()
