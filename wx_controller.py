@@ -10,6 +10,8 @@ class wx_controller:
         self.bot = bot
 
     def login_callback(self):
+        if os.path.exists('./temp') is False:
+            os.mkdir('./temp')
         # work after login
         print(self.bot, 'login!')
         # main_worker
